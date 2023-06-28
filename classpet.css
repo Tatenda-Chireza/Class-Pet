@@ -1,0 +1,519 @@
+*{
+  background-color: #313131;
+  margin:0;
+  padding:0; 
+}
+
+@font-face {
+  font-family: Londria outline;
+  src: url(./fonts/Londria\ outline.ttf);
+}
+
+@font-face {
+  font-family: Londria Solid;
+  src: url(./fonts/Londrina\ Solid.ttf);
+}
+
+@font-face {
+  font-family: roboto regular;
+  src: url(./fonts/roboto\ regular.ttf);
+}
+
+
+h2 {
+  text-align: center;
+
+}
+
+
+/*nav */
+a{
+  text-decoration: none;
+}
+.navbar-container{
+  display:flex;
+  justify-content: space-between;
+  padding:0 1rem;
+  height:70px;
+  align-items: center;
+  background: #313131;
+  color: #fff;
+  position:fixed;
+  top:0;
+  width: 100%;
+}
+
+.navbar-container .logo-container a{
+  font-size:1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  color:#fff;
+  font-weight:500;
+  font-family:'kanit' sans-serif ;
+}
+
+.navbar-container .nav-items{
+  display:flex;
+  list-style-type: none;
+  gap: 3rem;
+  align-items: center;
+}
+
+.navbar-container .nav-items .nav-link a {
+  color: #fff;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.navbar-container .nav-items .nav-link::after {
+  display:block;
+  content: "";
+  border-top: 2px solid #FA5559;
+  transform: scaleX(0);
+  -webkit-transition:scaleX(0) ;
+  -moz-transition:scaleX(0) ;
+  -ms-transition:scaleX(0) ;
+  -o-transition:scaleX(0) ;
+  transition: transform 250ms ease-in-out;
+  -webkit-transition: transform 250ms ease-in-out;
+  -moz-transition: transform 250ms ease-in-out;
+  -ms-transition: transform 250ms ease-in-out;
+  -o-transition: transform 250ms ease-in-out;
+}
+
+.navbar-container .nav-items .nav-link:hover::after{
+  transform: scaleX(1);
+  -webkit-transform:scaleX(1) ;
+  -moz-transform:scaleX(1) ;
+  -ms-transform:scaleX(1) ;
+  -o-transform:scaleX(1) ;
+}
+
+.navbar-container .nav-items .nav-link a:hover{
+  filter:brightness(80%);
+  -webkit-filter: brightness(80%);
+}
+.nav-items{
+  padding-right: 3rem;
+}
+.nav-link{
+  padding-top: 2rem;
+}
+
+.navbar-container .nav-items .play-game{
+  display: flex;
+  padding-top: 2rem;
+ 
+}
+.navbar-container .nav-items .play-game .button1 {
+  color: #000000;
+  border: 2px solid #ffffff;
+  background: #fff; 
+  padding: 5px 20px;
+  border-radius: 3px;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  -ms-border-radius:3px;
+  -o-border-radius:3px;
+  text-transform:uppercase;
+  transition: all ease-in 0.3s;
+  -webkit-transition: all ease-in 0.3s;
+  -moz-transition:all ease-in 0.3s ;
+  -ms-transition:all ease-in 0.3s;
+  -o-transition:all ease-in 0.3s;
+}
+
+.navbar-container .nav-items .play-game .button1:hover {
+  background: #d84a4c;
+  color: #fff;
+  border: 2px solid #d84a4c;
+}
+/*nav end*/
+
+
+
+.title{
+  font-family: londria outline;
+  font-size: 6vh;
+  color: #f1f1f1;
+  padding-left: 10px;
+  font-weight:normal;
+}
+
+.name{
+  font-family: Londria Solid;
+  color: #FA5559;
+  font-size: 6vh;
+  text-decoration-line: none;
+}
+.wrapper{
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.about-info{
+  width: 50%;
+  float: right;
+}
+
+.img-pet{
+  padding-top: 0px;
+  width:50%;
+  float: left;
+}
+.about-info h2{
+  padding: 20px 0px 0px 30px;
+  font-size: 50px;
+  line-height: 44px;
+}
+.about-info p {
+  padding: 20px 0px 0px 30px;
+  font-size: 26px;
+  line-height: 29px;
+  color: #f1f1f1;
+ 
+}
+
+
+.profile{
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+
+
+
+
+
+.line{
+  text-decoration-line: underline;
+  text-decoration-color: #FA5559;
+  text-decoration-thickness: 1px;
+  text-underline-position: under;
+  
+}
+/* button code*/
+button {
+  position: relative;
+  background: #444;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid var(--clr);
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  transition: 0.2s;
+}
+
+button:hover {
+  letter-spacing: 0.2rem;
+  padding: 1.1rem 3.1rem;
+  background: var(--clr);
+  color: var(--clr);
+  /* box-shadow: 0 0 35px var(--clr); */
+  animation: box 3s infinite;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  
+  inset: 2px;
+  background: #272822;
+}
+
+button span {
+  position: relative;
+  z-index: 1;
+}
+button i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+button i::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 80%;
+  top: -2px;
+  border: 2px solid var(--clr);
+  background: #272822;
+  transition: 0.2s;
+}
+
+button:hover i::before {
+  width: 15px;
+  left: 20%;
+  animation: move 3s infinite;
+}
+
+button i::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 20%;
+  bottom: -2px;
+  border: 2px solid var(--clr);
+  background: #272822;
+  transition: 0.2s;
+}
+
+button:hover i::after {
+  width: 15px;
+  left: 80%;
+  animation: move 3s infinite;
+}
+ 
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+} 
+
+@keyframes box {
+  0% {
+    box-shadow: #27272c;
+  }
+  50% {
+    box-shadow: 0 0 25px var(--clr);
+  }
+  100% {
+    box-shadow: #27272c;
+  }
+}
+
+/*adjustment for ipad screen*/
+@media only screen and (min-width: 820px){
+  .game{
+     /* padding-top: 50px;
+    height: 400px;
+    width: 400px;
+    padding-left: 20rem; */
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+  
+  }
+  .wrapper{
+    width: 1000px;
+    margin: 0 auto;
+    
+  }
+  .profile{
+    padding-left: 235px;
+    padding-top: 50px;
+    margin: auto;
+  }
+  
+  .about-info h2{
+    padding: 20px 0px 0px;
+    font-size: 50px;
+    line-height: 44px;
+  }
+  .about-info p {
+    padding: 20px 0px 0px 20px;
+    font-size: 26px;
+    line-height: 29px;
+    padding-bottom: 124px;
+  }
+  .img-pet{
+    padding-top: 30px;
+  }
+
+  .profiles .profile{
+    padding-left: 4rem;
+  
+  
+  }
+  
+.title1{
+ font-size: 5rem;
+}
+.name{
+  font-size: 5rem;
+}
+
+ .intro-text{
+ 
+
+  
+  margin-left: 50px;
+  margin-top: 90px;
+  display: flex;
+
+}
+  .div1 {
+    position:absolute;
+    left:0;
+  }
+  .div2{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+  }
+  .div3{
+    position:absolute;
+    right: 0;
+  }
+} 
+
+
+/* adjustment for mobile phones*/
+ @media(max-width: 700px){ 
+  .title{
+    font-family: londria outline;
+    font-size: 6vh;
+    color: #f1f1f1;
+    padding-left: 10px;
+   
+  }
+  
+  .name{
+    font-family: Londria Solid;
+    color: #FA5559;
+    font-size: 6vh;
+    text-decoration-line: none;
+  }
+
+  .wrapper{
+    width: 100%
+  }
+  .about-info{
+    width: 100%;
+  }
+  .game{
+    /* width:100;
+    height:300px;  
+    border: none;
+    width: 95%;
+    padding-left: 7px; */
+    position: relative;
+    width: 450px;
+    height: 500px;
+    margin: auto;
+
+  }
+  
+  .profile{
+    padding-left: 10px;
+    padding-top: 20px;
+  }
+  
+  .about-info p {
+    /* font-family: roboto regular; */
+    font-size: 3vh;
+    color: #f1f1f1;
+  }
+  
+  .img-pet{
+    width: 95%;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  /*nav*/
+.navbar-container .nav-items{
+  flex-direction: column;
+  position: fixed;
+  top: 70px;
+  width: 100vw;
+  background: #313131;
+  padding: 1rem 0;
+  height: 100vh;
+  z-index:99;
+  right: -100%;
+  transition: 0.2s ease-in;
+-webkit-transition: 0.2s ease-in;
+  -moz-transition:0.2s ease-in ;
+  -ms-transition:0.2s ease-in;
+  -o-transition:0.2s ease-in;
+}
+
+.bars {
+  height: auto;
+  width: 22px;
+  cursor:pointer;
+  padding-right: 3rem;
+}
+
+.bars .bar {
+  height: 3px;
+  width:100%;
+  background: #fff;
+  margin: 4px;
+}
+
+.navbar-container .nav-items {
+  gap: 3rem;
+}
+
+.navbar-container .nav-items .play-game{
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  width: 40%;
+}
+
+.navbar-container .nav-items .play-game .button1{
+  padding: 1rem 0;
+}
+/*nav end*/
+.profile{
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.about-info h2{
+  padding: 30px 30px 20px;
+  font-size: 50px;
+  line-height: 44px;
+}
+.about-info p {
+  padding: 0px 30px 20px;
+  font-size: 26px;
+  line-height: 29px;
+}
+
+
+}
+
+
+/*adjustment for computer screen*/
+
+ @media(max-width:1000px) { 
+  .navbar-container{
+    padding: 0 1rem;
+  }
+
+  .navbar-container .nav-items {
+    gap: 0.1rem;
+  }
+
+  .navbar-container .nav-items .nav-link a, .navbar-container .nav-items .play-game .button1 {
+    font-size: 0.9rem;
+  }
+  
+ 
+}
+
+/*used to toggle the nav-items in JS*/
+
+.navbar-container .nav-items.active {
+   right: 0;
+}
